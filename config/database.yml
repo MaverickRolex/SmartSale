@@ -1,0 +1,16 @@
+default: &default
+  adapter: postgresql
+  pool: 5
+  timeout: 5000
+  username: rolando
+  password: roga186425
+
+development:
+  <<: *default
+  database: smart_sale_development
+test:
+  <<: *default
+  database: smart_sale_test
+production:
+  <<: *default
+  database: smart_sale_production
