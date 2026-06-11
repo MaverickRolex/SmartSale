@@ -1,0 +1,40 @@
+<% content_for :title, "Sign In" %>
+
+<main class="auth-page">
+  <section class="auth-panel">
+    <div class="auth-panel__header">
+      <p class="auth-panel__eyebrow">Smart Sale</p>
+      <h1 class="auth-panel__title">Sign in</h1>
+      <p class="auth-panel__subtitle">Access your workspace with your user name and password.</p>
+    </div>
+
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: "auth-form" }) do |form| %>
+      <% if alert.present? %>
+        <p class="app-alert app-alert--error"><%= alert %></p>
+      <% end %>
+
+      <% if notice.present? %>
+        <p class="app-alert app-alert--notice"><%= notice %></p>
+      <% end %>
+
+      <div class="form-field">
+        <%= form.label :user_name, "User name", class: "form-label" %>
+        <%= form.text_field :user_name, autofocus: true, autocomplete: "username", class: "form-input", placeholder: "Enter your user name" %>
+      </div>
+
+      <div class="form-field">
+        <%= form.label :password, "Password", class: "form-label" %>
+        <%= form.password_field :password, autocomplete: "current-password", inputmode: "numeric", pattern: "[0-9]*", minlength: 4, class: "form-input", placeholder: "Enter your password" %>
+      </div>
+
+      <% if devise_mapping.rememberable? %>
+        <label class="check-field">
+          <%= form.check_box :remember_me, class: "check-field__input" %>
+          <span>Remember me</span>
+        </label>
+      <% end %>
+
+      <%= form.submit "Sign in", class: "button button--primary button--full" %>
+    <% end %>
+  </section>
+</main>

@@ -1,0 +1,105 @@
+.button {
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: $radius-sm;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: $font-family-base;
+  font-size: $font-size-small;
+  font-weight: $font-weight-semibold;
+  gap: 0.5rem;
+  justify-content: center;
+  line-height: 1;
+  min-height: 2.5rem;
+  padding: 0 1rem;
+  text-decoration: none;
+  transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease;
+}
+
+.button--primary {
+  background: $color-primary;
+  color: $color-surface;
+
+  &:hover {
+    background: $color-primary-hover;
+  }
+}
+
+.button--secondary {
+  background: $color-surface;
+  border-color: $color-border;
+  color: $color-text;
+
+  &:hover {
+    background: $color-surface-muted;
+  }
+}
+
+.button--full {
+  width: 100%;
+}
+
+.form-field {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.form-label {
+  color: $color-text;
+  font-size: $font-size-small;
+  font-weight: $font-weight-semibold;
+}
+
+.form-input {
+  background: $color-surface;
+  border: 1px solid $color-border;
+  border-radius: $radius-sm;
+  color: $color-text;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  min-height: 2.85rem;
+  outline: none;
+  padding: 0 0.85rem;
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+  width: 100%;
+
+  &:focus {
+    border-color: $color-primary;
+    box-shadow: 0 0 0 3px $color-primary-soft;
+  }
+
+  &::placeholder {
+    color: $color-text-muted;
+  }
+}
+
+.check-field {
+  align-items: center;
+  color: $color-text-muted;
+  display: inline-flex;
+  font-size: $font-size-small;
+  gap: 0.5rem;
+}
+
+.check-field__input {
+  accent-color: $color-primary;
+  height: 1rem;
+  width: 1rem;
+}
+
+.app-alert {
+  border-radius: $radius-sm;
+  font-size: $font-size-small;
+  margin: 0;
+  padding: 0.8rem 0.9rem;
+}
+
+.app-alert--error {
+  background: $color-danger-soft;
+  color: $color-danger;
+}
+
+.app-alert--notice {
+  background: $color-notice-soft;
+  color: $color-notice;
+}

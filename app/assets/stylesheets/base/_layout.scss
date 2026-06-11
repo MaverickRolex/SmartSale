@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  background: $color-page;
+  color: $color-text;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  margin: 0;
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+}
+
+.auth-page {
+  align-items: center;
+  display: grid;
+  min-height: 100vh;
+  padding: 1.25rem;
+}
+
+.auth-panel {
+  background: $color-surface;
+  border: 1px solid $color-border;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-panel;
+  margin: 0 auto;
+  max-width: 26rem;
+  padding: 2rem;
+  width: 100%;
+}
+
+.auth-panel__header {
+  display: grid;
+  gap: 0.45rem;
+  margin-bottom: 1.6rem;
+}
+
+.auth-panel__eyebrow,
+.page-header__eyebrow {
+  color: $color-primary;
+  font-size: 0.78rem;
+  font-weight: $font-weight-bold;
+  letter-spacing: 0;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.auth-panel__title,
+.page-header__title {
+  color: $color-text;
+  font-family: $font-family-heading;
+  font-size: $font-size-title;
+  line-height: 1.15;
+  margin: 0;
+}
+
+.auth-panel__subtitle {
+  color: $color-text-muted;
+  font-size: $font-size-subtitle;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.auth-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.topbar {
+  align-items: center;
+  background: $color-surface;
+  border-bottom: 1px solid $color-border;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: auto 1fr auto;
+  min-height: 4.25rem;
+  padding: 0 1.5rem;
+}
+
+.topbar__brand {
+  color: $color-text;
+  font-weight: $font-weight-bold;
+  text-decoration: none;
+}
+
+.topbar__nav {
+  align-items: center;
+  display: flex;
+  gap: 0.35rem;
+}
+
+.topbar__link {
+  border-radius: $radius-sm;
+  color: $color-text-muted;
+  font-size: $font-size-small;
+  font-weight: $font-weight-semibold;
+  padding: 0.65rem 0.8rem;
+  text-decoration: none;
+
+  &:hover {
+    background: $color-primary-soft;
+    color: $color-primary;
+  }
+}
+
+.topbar__account {
+  align-items: center;
+  display: flex;
+  gap: 0.8rem;
+}
+
+.topbar__user {
+  color: $color-text-muted;
+  font-size: $font-size-small;
+  font-weight: $font-weight-medium;
+}
+
+.app-shell {
+  margin: 0 auto;
+  max-width: 72rem;
+  padding: 2rem 1.5rem;
+}
+
+.page-header {
+  display: grid;
+  gap: 0.35rem;
+}
+
+@media (max-width: 720px) {
+  .topbar {
+    align-items: stretch;
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .topbar__nav,
+  .topbar__account {
+    justify-content: space-between;
+  }
+}
